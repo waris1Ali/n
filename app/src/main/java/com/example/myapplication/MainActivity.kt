@@ -1,0 +1,166 @@
+package com.example.myapplication
+
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.article
+import com.example.myapplication.R
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_main)
+        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+        val adapter: ArticleAdapter = ArticleAdapter(getArticles())
+        recyclerview.adapter = adapter
+        recyclerview.layoutManager = LinearLayoutManager(this)
+
+    }
+
+    fun getArticles(): List<article> {
+        val articles=ArrayList<article>()
+        articles.add(article(
+            title = "Terminator",
+            author = "By jhon vick",
+            image = R.drawable.m1,
+            details = "When director James Cameron’s The Terminator hit cinemas in 1984, it forever altered the landscape of science fiction.\n" +
+                    "\n" +
+                    "Released 40 years ago, the plot unfolds against the backdrop of a post-apocalyptic future where an artificial intelligence (AI) defence network, Skynet, has turned against humanity. It triggers a nuclear holocaust and creates a dystopian world where machines hunt down the last remnants of human life.\n" +
+                    "\n" +
+                    "Desperate to avoid defeat by the human resistance, Skynet sends a Terminator back in time. This lifelike android is almost indistinguishable from a person, but superior in strength, agility and intelligence. Its mission – eliminate Sarah Connor (Linda Hamilton), the mother of the future human resistance leader. The Terminator, played by Arnold Schwarzenegger, is relentless in its pursuit and a near unstoppable force.\n" +
+                    "\n" +
+                    "Meanwhile, Sarah’s son, John, sends back a lone warrior, Kyle Reese (Michael Biehn), from the future to protect his mother. Though human and vulnerable, through his determination and resourcefulness, Sarah is able to defeat the Terminator. In so doing, Reese impregnates Sarah and fathers his son, John, the very man who will send him back in time.\n" +
+                    "\n" +
+                    "The movie explores themes of fate and free will. It’s underpinned by the potential consequences of unchecked technological advancement in the era of the presidency of Ronald Reagan and his strategic defense initiative. “Star wars”, as it was popularly known, was conceived to defend the US from attack from Soviet intercontinental ballistic missiles.\n" +
+                    "\n" +
+                    "I have been teaching The Terminator to students since the early 2000s, initially as part of degrees related to modern US history, and since 2006 as part of the film studies degree programme at Bangor University. This has allowed me to appreciate the film and study it in depth. It has made a deep and lasting impression on me as not only one of the best science fiction films of the 1980s but as one of the best sci-fi films ever made.\n" +
+                    "\n" +
+                    "Inspiration\n" +
+                    "James Cameron has said he initially conceived the idea for the film during post-production of the monster horror, Piranha II: The Spawning (1982). He wrote a 45-page treatment, which he intended to direct, with his future wife Gale Anne Hurd as producer. When several studios showed interest, the couple became concerned about losing control of the project. Cameron hired Schwarzenegger for the title role in late April 1983, to ensure their continued involvement.\n" +
+                    "\n" +
+                    "Filming began in February 1984 on a budget of US\$6.5 million (£5.2 million). After 15 weeks of shooting and post production, a rough edit was assembled. It opened on October 26 1984 in 1,012 cinemas across the US. While the critical reviews were mixed, audiences responded enthusiastically, earning the picture more than \$9.7 million in its first ten days.\n" +
+                    "\n" +
+                    "\n" +
+                    "The Terminator (1984) official trailer.\n" +
+                    "The Terminator was part of a new sub-genre in science fiction known as “tech noir”, taking its name from the nightclub in the movie. It presents technology as a destructive force. Other films of this genre include THX 1138 (1970), Westworld (1973), Logan’s Run (1976), and Blade Runner (1982).\n" +
+                    "\n" +
+                    "Influenced by the murderous supercomputer HAL-9000 in Stanley Kubrick’s 2001: A Space Odyssey (1968), The Terminator feeds into fears generated by the revolution in computerisation since the 1970s. It is no coincidence that the cyborg’s eyes are red like HAL’s. While reflecting on the implications of technology and manifesting a fascination with hi-tech industry, computer technology, the rise of multinational corporations and genetic engineering, it projected a dystopian, pessimistic view of the future.\n" +
+                    "\n" +
+                    "Read more: 2001: A Space Odyssey still leaves an indelible mark on our culture 55 years on\n" +
+                    "\n" +
+                    "Schwarzenegger first appeared on screen as the iconic T-800 at the age of 37. He would go on to the play the machine until age 72. Schwarzenegger’s distinctive bodybuilder’s physique played into the invincibility of the machine. But it also dovetailed with what have been called the “hardbodied” politics of the Reagan era that favoured such tough and hyper-masculine action heroes as Sylvester Stallone and Chuck Norris.\n" +
+                    "\n" +
+                    "The Terminator’s innovative storyline, pacing, special effects and music helped to establish James Cameron as a major force in Hollywood. Before it, he had only helmed one movie. Thereafter, he went on to direct some of the biggest blockbusters of the 1980s and 1990s, including Aliens (1986), The Abyss (1989), Terminator 2: Judgment Day (1991), True Lies (1994) and Avatar (2009)."
+
+
+        ))
+
+
+        articles.add(article(
+            title = "joker",
+            author = "Rough fadrick",
+            image = R.drawable.m3,
+            details ="Todd Phillips’ 2017 blockbuster Joker was a standalone origin story for the DC Universe’s most celebrated super-villain, The Joker, who has been Batman’s recurring nemesis since 1940. Drawing overtly on Martin Scorsese’s classic studies of American psychosis, Taxi Driver (1976) and The King of Comedy (1982), it was the boldest attempt yet to render comic-book characters with psychological depth and complexity on film.\n" +
+                    "\n" +
+                    "But audiences and critics had mixed feelings about Joker, real name Arthur Fleck, who was portrayed by Joaquin Phoenix in an Oscar-winning performance. The film seemed ambivalent to Fleck’s murderous violence, which it portrayed as the inevitable consequence of his abandonment by a callous, shallow and vicious culture. It meant that some fans saw Joker not as pitiable – but heroic.\n" +
+                    "\n" +
+                    "Seemingly taken aback by this reaction, Phillips’ belated sequel, Joker: Folie à Deux, sets out to deliver an unmistakable correction – at considerable length and with singleminded insistence. The film is an extended, self-righteous rebuke to anyone foolish enough to have mistaken Joker for an incel manifesto.\n" +
+                    "\n" +
+                    "Spending US\$200 million (£152 million) to berate the film’s potential audience in this fashion is certainly a bold and novel strategy. As an ethical stance, it may even be admirable. Unfortunately, dramatic interest, character development and audience engagement are all collateral damage of Phillips’ take-no-prisoners approach."
+
+        ))
+
+
+        articles.add(article(
+            title = "19th-century French novelist",
+            author = "By alin elin",
+            image = R.drawable.m2,
+            details ="The multiverse has become an essential part of pop culture. The Marvel Cinematic Universe (MCU) brought this shared universe style of storytelling to global prominence with Iron Man (2008), where a post-credit scene hinted at a larger interconnected universe.\n" +
+                    "\n" +
+                    "Over time, this expanded into a cinematic multiverse, particularly with the 2016 film Doctor Strange. Films like Spider-Man: No Way Home (2021) and Doctor Strange: Multiverse of Madness (2022) introduced audiences to parallel universes where different versions of the same character coexist. The multiverse has also been embraced by other films, like Everything Everywhere All At Once (2022), which won multiple Academy Awards and Stree 2, which became the highest-grossing Bollywood film of all time in September 2024.\n" +
+                    "\n" +
+                    "This style of storytelling has deep literary roots. I believe the first person to master the fictional multiverse was the 19th-century French novelist, Honoré de Balzac, in his monumental work La Comédie Humaine (The Human Comedy, 1829-1847).\n" +
+                    "\n" +
+                    "Read more: Multiverse films take characters to increasingly dark places – as Robert Downey Jr's Doctor Doom casting shows\n" +
+                    "\n" +
+                    "In the 1920s, German physicist Werner Heisenberg challenged Newtonian physics, positing that particles can simultaneously occupy multiple states – he called this the Uncertainty Principle. Later, in the 1950s, American physicist Hugh Everett proposed the Many Worlds Interpretation, suggesting that all possible outcomes of a quantum event occur, each in a separate parallel universe.\n" +
+                    "\n" +
+                    "While this theory was developed in physics, the term “multiverse” was introduced into literature by British science fiction writer Michael Moorcock. In The Eternal Champion (1970), he envisioned characters existing in parallel worlds with multiple avatars.\n" +
+                    "\n" +
+                    "Painting of Balzac with a moustache, wearing a dressing gown.\n" +
+                    "Honoré de Balzac, by Louis Boulanger (1836). Wikimedia., CC BY-SA\n" +
+                    "However, Balzac’s La Comédie Humaine, written over a century earlier, already contained the seeds of multiverse storytelling. Comprising nearly 100 novels and short stories, it features thousands of characters who reappear across different works, creating a shared universe that allows for complex narrative interconnections.\n" +
+                    "\n" +
+                    "Balzac’s innovation was not merely in these recurring characters, but in the thematic and conceptual unity he established across his fictional universe.\n" +
+                    "\n" +
+                    "This cohesion is built through his “typology” of characters. Balzac’s “types” are characters who embody universal traits while retaining their individual personalities – making them instantly recognisable across different stories.\n" +
+                    "\n" +
+                    "In his preface to Une Ténébreuse Affaire (An Historical Mystery, 1841), Balzac defends his use of types: “A type … is a character who summarises in himself certain characteristic traits of all those who more or less resemble him; he is the model of the genre.”\n" +
+                    "\n" +
+                    "Hungarian philosopher Georg Lukács expanded on this idea, stating that Balzac’s types represent a synthesis of the individual and the universal. These characters are universal enough to represent broader societal forces, while remaining distinct individuals within their own narratives."
+        ))
+
+        articles.add(article(
+            title = "Portraits of Dangerous Women offers little danger – but is an intriguing slice of English life nonetheless",
+            author = "By jhon brown",
+            image = R.drawable.m5,
+            details ="At one point in the new movie Portraits of Dangerous Women, young woman Ashley (Yasmin Monet Prince) is talking to gallery owner Jon (Mark Lewis Jones) about her collection of found photographs. “I just want to put them in …”, “context?” Jon ventures. “No, frames” Ashley corrects. This seemingly simple act encapsulates the work of the film, in which the mundane is given centre stage, but in a disconcertingly unfamiliar way.\n" +
+                    "\n" +
+                    "Set in a strangely timeless version of England, the film centres on the lives of three “dangerous women”, although precisely how dangerous they are is debatable.\n" +
+                    "\n" +
+                    "Dangerous Woman One is Steph (Jeany Spark), a primary school teacher (albeit with an almost eerie absence of any children to teach). We’re introduced to her as she drives her father, Jon, along a series of country roads – a long, chaotically filmed sequence in which her stress manifests through increasingly reckless driving. She is clearly at breaking point, although with no obvious cause.\n" +
+                    "\n" +
+                    "Dangerous Women Two and Three arrive on the scene when Steph’s inattentive driving leads her to run over a dog – although it quickly becomes apparent that the dog had already been run over and killed by Dangerous Woman Two, Tina (Tara Fitzgerald). Ashley is the final member of the triumvirate, claiming to own the dog, and making the bad days of Steph, Tina and Jon much worse by loudly guilt-tripping them all."
+        ))
+
+
+
+        articles.add(article(
+            title = " why we should imagine talking to our older rather than younger selves, according to an expert in psychology",
+            author = "By jhon brown",
+            image = R.drawable.m6,
+            details ="on a trip to an island with friends and some hallucinogenic mushrooms, Elliott has a unique experience where she gets to meet her older self. This sets the scene for a dialogue where 39-year-old Elliott gets to reflect and impart advice about the things she wishes she had done differently. She does this in the hope that 18-year-old Elliott will think about where her actions might lead.\n" +
+                    "\n" +
+                    "While it’s unlikely many of us will get the opportunity to actually talk to our younger or older selves, many of us, I’m sure, daydream about what we would say. When we engage in this mental time travel, we do more than just recall the things that have happened or think about the things we know are going to happen; instead, like Elliott, we delve into a world of how things could be different.\n" +
+                    "\n" +
+                    "Imagination is something we often consider to be unpredictable but it turns out that there are commonalities in the things we bring to mind. Like Elliott, we tend to focus on thoughts of ourselves and of our goals rather than other things going on in the world. There are also similarities in when we engage in this type of thinking – most often when things are not going so well or when doors to opportunities start to close.\n" +
+                    "\n" +
+                    "Looking back to the past or forward to the future and imagining how things might be different can be useful. We see our lives not just as they are, but in contrast to how things might be different.\n" +
+                    "\n"
+        ))
+        articles.add(article(
+            title = "Will & Harper: Netflix documentary is a call to action for trans allies",
+            author = "By jhon brown",
+            image = R.drawable.m7,
+            details ="In 2014, Time magazine published a story titled The Transgender Tipping Point. It argued that trans representation in contemporary media had become so plentiful that it was helping western culture to evolve in its views of gender.\n" +
+                    "\n" +
+                    "There have indeed been many well-intentioned fiction films in recent years which have represented characters in the process of gender transition, including The Danish Girl (2015) and A Fantastic Woman (2017). While these films have attempted to challenge earlier stereotypes of trans people as bathroom predators and psychopaths, many of them have inadvertently reinforced other prejudices held about trans people.\n" +
+                    "\n" +
+                    "Such films have utilised narrative motifs such as the “trans reveal” (where the character’s revelation of their trans-ness is a shock in the narrative), the “trapped in the wrong body” lament (in which gender-confirmation surgery is their ultimate goal) and the “isolated exhibit” trope (where they are alone and abandoned by friends and family, treated not unlike a freak show exhibit). In doing so, I believe many of these recent films have furthered contemporary misunderstandings – and even heightened transphobia.\n" +
+                    "\n" +
+                    "The new Netflix documentary Will & Harper is a touching road movie and a celebration of friendship. It follows actor Will Ferrell as he embarks on a road trip from New York to LA with his longtime scriptwriter friend Harper Steele, who is transitioning at the age of 61. At its core, the film is obviously determined to challenge many of the tropes and prejudices that have underpinned previous films about trans people.\n" +
+                    "\n" +
+                    "For example, Steele tells Ferrell about her transition in a casual, friendly email, rather than a dramatic reveal. She is relaxed about discussions of potential surgical interventions and, most importantly, is shown to be supported by family and her longtime best friend, Ferrell."
+        ))
+        articles.add(article(
+            title = "Why the changing representation of dwarfism in Disney’s live action Snow White remake is so important",
+            author = "By jhon brown",
+            image = R.drawable.m8,
+            details ="The upcoming release of Disney’s live action remake of Snow White and the Seven Dwarfs, currently scheduled for March 2025, has been surrounded by controversy – so much so that the film’s trailer has received over 1 million dislikes on YouTube. In particular, many fans have taken umbrage with the fact that computer-generated imagery (CGI) will be used for the characters of the seven dwarfs, now renamed the “miners”, rather than having them played by dwarf actors.\n" +
+                    "\n" +
+                    "To my mind, unless changes are made, it would be better not to release a live action remake of Snow White in the first place. My doctoral research has shown that it’s common for people with dwarfism to experience mockery influenced by the representation of dwarfism in Snow White and the Seven Dwarfs. But if the film is to go ahead, CGI is a better choice than to cast real people with dwarfism.\n" +
+                    "\n" +
+                    "Fans lamenting on social media the fact that they will no longer be able to see a film featuring “real dwarfs” ignore the parallels with the Victorian freak show. Frequently their disappointment is masked as supposed concern for the welfare of “actors” with dwarfism who will lose the “opportunity” to play these characters.\n" +
+                    "\n" +
+                    "But people with dwarfism who play these characters are rarely seen as serious actors. Alice Lambert, an actress with dwarfism, was interviewed for a chapter in my new book, Dwarfism Arts and Advocacy (2024). In it, she recalls that during her time in pantomime, people “would come to the stage door after the show, but I realised that they just wanted to meet ‘a dwarf’ … you are not being represented as a performer, but rather your dwarfism is being paraded for the amusement of others”.\n" +
+                    "\nx"
+        ))
+
+        return articles
+    }
+}
